@@ -7,5 +7,5 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 soupsieve==2.2
-SQLAlchemy
+Flask-SQLAlchemy==2.4.4
 Werkzeug==1.0.1
