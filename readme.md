@@ -1,3 +1,4 @@
-# doitbetter.io
-This is a webapp which scrapes 2 and 3 star reviews from Amazon depending on the users search criteria. 
-The goal is to find common painpoints and poorly served needs so that entrepreneurs can outcompete their competition.
+# Flask Crud Basics
+This is a refrence to myself and anyone new to Flask.
+It contains heavy annotations about using Flask, MySQL, Bootstrap, and Heroku.
+The goal is to save myself time searching documentation for common needs.
