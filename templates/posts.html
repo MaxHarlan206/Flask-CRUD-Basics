@@ -24,5 +24,7 @@
         <h3>By: Unknown</h3>
     {% endif %}
     <p>{{ post.content }}</p>
+    <a href="/posts/delete/{{post.id}}">DELETE</a>
+    <hr>
 {% endfor %}
 {% endblock %}
