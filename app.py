@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SQL_ALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db' # just by changing this one line later, we can use mysql or something like that which is more appropriate for production and enterprise
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db' # just by changing this one line later, we can use mysql or something like that which is more appropriate for production and enterprise
 db = SQLAlchemy(app)
 
 # this is the creation of a model, yes, you need to hardcode it, but is this such a big deal compared to django? no
