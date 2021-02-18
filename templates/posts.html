@@ -3,18 +3,34 @@
 <title>Posts</title>
 {% endblock %}
 {% block body %}
-<H1>All Posts</H1>
-<hr>
+<br>
 <h2>Create New Blog Post</h2>
 <form action="/posts" method="POST">
-    Title: <input type="text" name="title" id="title">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Author</span>
+      </div>
+      <input name="author" id="author" type="text" class="form-control" placeholder="Enter your name" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Title</span>
+      </div>
+      <input name="title" id="title" type="text" class="form-control" placeholder="Enter a title" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Post content</span>
+      </div>
+        <textarea name="content" id="content" class="form-control" aria-label="With textarea" placeholder="Write something awesome"></textarea>
+    </div>
     <br>
-    Post: <input type="text" name="content" id="content">
-    <br>
-    Author: <input type="text" name="author" id="author">
-    <br>
-    <input class="btn btn-success" type="submit" value="Post" role="button">
+    <input class="btn btn-success" type="submit" value="POST" role="button">
 </form>
+<hr>
+<H1>All Posts</H1>
 <hr>
 {% for post in posts %}
     <h2>{{ post.title }}</h2>
