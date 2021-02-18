@@ -24,6 +24,10 @@ all_posts = [
 def index():
     return render_template('index.html')
 
+@app.route('/new_post',  methods=['GET', 'POST'])
+def new_post():
+    return render_template('new_post.html')
+
 @app.route('/posts', methods=['GET', 'POST'])
 def posts():
     if request.method == 'POST':
