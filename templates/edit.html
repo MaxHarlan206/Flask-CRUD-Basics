@@ -6,13 +6,28 @@
     <H1>Edit Post</H1>
     <hr>
     <form action="/posts/edit/{{post.id}}" method="POST">
-        Title: <input type="text" name="title" id="title" value="{{post.title}}">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Author</span>
+          </div>
+          <input name="author" id="author" type="text" class="form-control" value="{{post.author}}" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Title</span>
+          </div>
+          <input name="title" id="title" type="text" class="form-control" value="{{post.title}}" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Post content</span>
+          </div>
+            <textarea name="content" id="content" class="form-control" aria-label="With textarea">{{post.content}}</textarea>
+        </div>
         <br>
-        Post: <input type="text" name="content" id="content" value="{{post.content}}">
-        <br>
-        Author: <input type="text" name="author" id="author" value="{{post.author}}">
-        <br>
-        <input class="btn btn-success" type="submit" value="Save Changes">
+        <input class="btn btn-success" type="submit" value="SAVE CHANGES" role="button">
     </form>
     <hr>
 {% endblock %}
